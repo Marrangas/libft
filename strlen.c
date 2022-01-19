@@ -6,13 +6,13 @@
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:15:13 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:06 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/19 12:42:28 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-unsigned long int	ft_strlen(char *s)
+#include <stddef.h>
+size_t	ft_strlen(char *s)
 {
-	unsigned long int	i;
+	size_t	i;
 
 	i = 0;
 	while (*(s + i) != '\0')

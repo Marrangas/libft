@@ -6,56 +6,64 @@
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:06:58 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/19 17:18:37 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/19 18:03:42 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
-{
-    size_t  i;
 
-    i = 0;
-	while (*((int *)(dst + i)) != '\0')
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-        if ((src + i) ==dst)
-            return (0);
-        i++;
-    
-
-    while (i < n)
-    {
-        *((char *)(dst +i)) = *((char *)(src + i));
-        i++;
-    }
-    return (dst);
-}
-
-#include <stddef.h>
-void *ft_memmove(void *dst, const void *src, size_t len)
-{
-	char non-destructive;
-	non-destructuve = 0;
-	while i < len
-		if *src + i == *dst || *src + i == dst + len -1
-			non-destructive = 1;
-		else
-			non-destructive
-				https://stackoverflow.com/questions/4023320/how-to-implement-memmove-in-standard-c-without-an-intermediate-copy
+		*((char *)(dst + i)) = *((char *)(src + i));
+		i++;
+	}
 	return (dst);
 }
 
-#include <string.h>
-#include <stdio.h>
-int main(void)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	char dst[]= "\"Donde estara mi carro\"";
-	char dst1[]= "Cosas de la vida";
-	char src[]= "Como deccia Rafael: ";
-	char src1[]= "pacas";
-	printf("La cadena de origen %s \n", src1);
-	printf("La cadena de destino %s \n", dst1);
-	//printf("Resultado %s \n",ft_memmove(dst, src, 5));
-	printf("Resultado Orginal %s \n",memmove(dst1, src1, 5));
+ssize_t	i;
+
+	i = 0;
+	while (*((char *)(dst + i)) != '\0')
+	{
+		if ((src + i) == dst || (src + i) == dst + n - 1)
+		{	
+			while (n > 0)
+			{
+				n--;
+				*((char *)(dst + n)) = *((char *)(src + n));
+			}
+			return (dst);
+		}
+		i++;
+	}
+	return (ft_memcpy(dst, src, n));
+}
+
+#include <stdio.h>
+#include <string.h>
+int main (void)
+{
+	char s[]= "01234567890";
+	char s1[]="01234567890";
+	char *src;
+	char *src1;
+	char *dst;
+	char *dst1;
+	size_t n;
+
+	n = 4;
+	src = &s[3];
+	dst = &s[5];
+	src1= &s1[3];
+	dst1 = &s1[5];
+	printf("Mi resultado %s \n", ft_memmove(dst, src, n));
+	printf("Resultado original %s \n", memmove(dst1, src1, n));
 	return (0);
 }

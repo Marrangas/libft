@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   tolower.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 17:45:48 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/20 18:04:34 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/20 18:04:56 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/20 18:11:03 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if ((c > '`') && (c < '{'))
-		return (c - 32);
+	if ((c > '@') && (c < '['))
+		return (c + 32);
 	return (c);
 }
 /*
 #include <stdio.h>
 int main()
 {
-	char c;
+    int c;
 
-	c = '\0';
-	printf("la letra original: %c", ft_toupper(c));
-	return (0);
+    c = 'A';
+    printf("la letra original: %c", ft_tolower(c));
+    return (0);
 }
 */

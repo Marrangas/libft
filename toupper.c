@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   toupper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 15:41:27 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/20 17:52:24 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/20 17:45:48 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/20 18:03:28 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 0 && c <= '~' + 1)
-		return (1);
-	return (0);
+	if ((c > '`') && (c < '{'))
+		return (c - 32);
+	return (c);
 }
 /*
 #include <stdio.h>
-int main (void)
+int main()
 {
-    printf("%i", ft_isascii('a'));
-    return (0);
+	char c;
+
+	c = '\0';
+	printf("la letra original: %c", ft_toupper(c));
+	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:06:58 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/19 18:03:42 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/20 15:44:33 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-ssize_t	i;
+	size_t	i;
 
 	i = 0;
 	while (*((char *)(dst + i)) != '\0')
@@ -45,7 +45,7 @@ ssize_t	i;
 	}
 	return (ft_memcpy(dst, src, n));
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main (void)
@@ -67,3 +67,4 @@ int main (void)
 	printf("Resultado original %s \n", memmove(dst1, src1, n));
 	return (0);
 }
+*/

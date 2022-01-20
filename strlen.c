@@ -6,11 +6,11 @@
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:15:13 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/19 12:42:28 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/20 17:20:36 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const <char *s)
 {
 	size_t	i;
 

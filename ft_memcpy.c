@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   cmcpy.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 17:45:48 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/20 18:04:34 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/19 15:19:29 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/21 15:30:49 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if ((c > '`') && (c < '{'))
-		return (c - 32);
-	return (c);
+	while (n--)
+		*(char *)dst++ = *(char *)src++;
+	return (dst);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char c;
-
-	c = '\0';
-	printf("la letra original: %c", ft_toupper(c));
-	return (0);
-}
-*/

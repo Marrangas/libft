@@ -6,19 +6,21 @@
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:15:13 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/20 17:20:36 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/21 15:35:25 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-size_t	ft_strlen(const <char *s)
+#include "libft.h"
+size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	size_t len;
 
-	i = 0;
-	while (*(s + i) != '\0')
-		i++;
-	return (i);
-}
+	len = 0;
+	if (!s)
+		return (len);
+	while (s[len])
+		len++;
+	return (len);
+}	
 /*
 #include <stdio.h>
 #include <string.h>

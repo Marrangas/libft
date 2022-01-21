@@ -10,17 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -39,29 +29,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return ((dst_len + ft_strlen(src)));
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    unsigned int n = 30;
-    char src1[] = "0123456789";
-    char dst1[] = "abcdefghijklmnopqrstuvwxyz";
-    char src[] = "0123456789";
-    char dst[] = "abcdefghijklmnopqrstuvwxyz";
-
-    printf("Origen: %s \n", src);
-    printf("Destino: %s \n", dst);
-    printf("---------------------------: \n");
-	printf("Ft Original: %zu \n", strlcat(dst1, src1, n));
-	printf("Origen: %s \n", src1);
-	printf("Destino: %s \n", dst1);
-	printf("---------------------------: \n");
-    printf("Mi función: %zu \n", ft_strlcat(dst, src, n));
-    printf("Origen: %s \n", src);
-    printf("Destino: %s \n", dst);
-    printf("---------------------------: \n");
-    return (0);
-}
-*/

@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 15:41:27 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/20 17:52:24 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/19 16:03:55 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/19 16:22:12 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_bzero(void *s, size_t n)
 {
-    if (c >= 0 && c <= '~' + 1)
-		return (1);
-	return (0);
+	while (n--)
+		*(char *)s++ = '\0';
 }
-/*
-#include <stdio.h>
-int main (void)
-{
-    printf("%i", ft_isascii('a'));
-    return (0);
-}
-*/

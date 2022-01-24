@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 17:45:48 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/24 17:23:36 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/24 17:13:49 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/24 18:03:55 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	if ((c > '`') && (c < '{'))
-		return (c - 32);
-	return (c);
+	size_t	i;
+	char	*string;
+
+	i = 0;
+	string = (void *)s;
+	while (i < n)
+	{
+		if (string[i] == (char)c)
+			return (&string[i]);
+		i++;
+	}
+	return (NULL);
 }

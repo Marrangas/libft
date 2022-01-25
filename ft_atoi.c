@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 11:58:41 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 12:30:56 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:01:19 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_atoi(const char *str)
 	{		
 		if (*str == '-')
 			sign = sign * (-1);
+		if (*(str + 1) == '-' || *(str + 1) == '+' )
+			return (0);
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')

@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 18:43:16 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 18:40:01 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/25 19:21:37 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/25 21:12:51 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*found;
+	char	*p;
+	char	*res;
 
-	i = 0;
-	found = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == (char) c)
-			found = ((char *)(s + i));
-		i++;
-	}
-	if ((char) c == 0)
-		return ((char *)(s+i));
-	return (found);
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > (ft_strlen(s) - start + 1))
+		len = ft_strlen(s) - start + 1;
+	p = malloc (len + 1);
+	res = p;
+	if (!p)
+		return (NULL);
+	while (len--)
+		*p++ = *(s++ + start);
+	*p++ = '\0';
+	return (res);
 }

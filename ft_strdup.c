@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 18:43:16 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 18:40:01 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/25 18:08:51 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/25 18:24:58 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
-	char	*found;
-
-	i = 0;
-	found = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == (char) c)
-			found = ((char *)(s + i));
-		i++;
-	}
-	if ((char) c == 0)
-		return ((char *)(s+i));
-	return (found);
+	void	*p;
+	
+	p = malloc (ft_strlen(s1)+1);
+	if (!p)
+		return (NULL);
+	return((char *)ft_memcpy(p, s1, ft_strlen(s1)+1));
 }

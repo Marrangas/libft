@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 15:11:51 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 12:33:42 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:45:52 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize > 0)
 	{
-		while (src[i] && (i < (--dstsize)))
+		while (src[i] && (i < (dstsize - 1)))
 		{
 			dst[i] = src[i];
 			i++;

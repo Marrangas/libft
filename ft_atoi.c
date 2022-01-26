@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 11:58:41 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 19:01:19 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/26 20:10:10 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 
 	n = 0;
 	sign = 1;
-	while (*str == '\0' || *str == ' ' || *str == '\f' || *str == '\n'
+	while (*str == ' ' || *str == '\f' || *str == '\n'
 		|| *str == '\r' || *str == '\t' || *str == '\v')
 		str++;
 	while (*str == '+' || *str == '-')
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 			return (0);
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*str && (*str >= '0' && *str <= '9'))
 		n = n * 10 + *str++ - 48;
 	if (n > 9223372036854775807 && sign < 0)
 		return (0);

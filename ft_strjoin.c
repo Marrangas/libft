@@ -6,13 +6,13 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 21:19:44 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/26 13:30:53 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/26 20:17:41 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char			*p;
 	char			*res;

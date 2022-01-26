@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:06:14 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 13:07:06 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/26 13:16:01 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		haystack++;
 	}
-	return (NULL);}
+	return (NULL);
+	}

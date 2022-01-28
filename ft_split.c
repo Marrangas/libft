@@ -1,7 +1,56 @@
 #include "libft.h"
 
+size_t	ft_wordcount(char const *s, char c)
+{
+	size_t	i;
+	size_t	n_str;
+
+	i = 0;
+	n_str = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+			n_str++;
+		i++;
+	}
+	return (n_str);
+}
 char	**ft_split(char const *s, char c)
 {
+	char	**p;
+	size_t	i;
+	size_t	sub_p;
+	size_t	last;
+	size_t	n_str;
+
+	if (!s)
+		return ((char **)ft_strdup(""));
+	n_str = ft_wordcount(s, c);
+	if (!(p = malloc (sizeof(char *) * (n_str))))
+		return (NULL);
+	i = 0;
+	last = 0;
+	sub_p = 0;
+	while (sub_p < n_str)
+	{
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		{
+			if (!(p[sub_p++] = malloc (ft_strlen(ft_substr(s, last, (i - last))))))
+				return (NULL);
+			while (s[i + 1] == c)
+				last = ++i +1;
+		}
+		i++;
+	}
+	return (p);
+}
+
+
+	//if (&ft_strchr(s[i], c) == &s[i])
+
+
+/*	
+	
 	char	*p;
 	char	*found; 	//?
 	
@@ -18,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	if (!s1)
 		return (ft_strdup(""));
 	if (!set || !found)
-		return ((char *)s1);
+		return ((char *)s1); // new complete string 
 //count occur
 	while (s1[i] && i < len_tot)
 	{
@@ -30,6 +79,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
+strsubstr
 
 //buff_strclean
 	if (!(p = malloc(len_tot - (len_sep * n))))
@@ -45,3 +95,4 @@ char	**ft_split(char const *s, char c)
 	}
 	return (p)
 }
+*/

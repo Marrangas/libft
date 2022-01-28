@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:52:17 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 16:30:11 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:32:13 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_intlen(int n)
 		len++;
 	while (n)
 	{
-		n = n/10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	p[len--] = '\0';
 	if (n == 0)
-		p[len--] = '0';	
+		p[len--] = '0';
 	if (n < 0)
 	{
 		p[len--] = ((n % 10) * (-1)) + '0';
@@ -49,7 +49,7 @@ char	*ft_itoa(int n)
 	while (n)
 	{
 		p[len--] = (n % 10) + '0';
-		n = n/10;
+		n = n / 10;
 	}
 	return (p);
 }

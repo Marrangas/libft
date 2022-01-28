@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:00:40 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 15:25:19 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:44:20 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,16 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	last = 0;
 	sub_p = 0;
+	while (s[i++] == c)
+		last++;
 	while (sub_p < n_str)
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
 			if (!(p[sub_p++] = malloc (ft_strlen(ft_substr(s, last, (i - last))))))
 				return (NULL);
-			while (s[i + 1] == c)
-				last = ++i +1;
+			while (s[i++ + 1] == c)
+				last = i + 1;
 		}
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:50:22 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 11:51:42 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:23:35 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*p;
-	int		index;
+	int		i;
 
+	i = 0;
 	if (!s || !f)
 		return (NULL);
-	if (!(p = malloc(sizeof(char) * (ft_strlen(s) + 1))))
-			return (NULL);
+	p = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!p)
+		return (NULL);
 	while (s[i])
 	{
 		p[i] = f(i, s[i]);

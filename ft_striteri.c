@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:51:38 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 11:51:41 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:24:05 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	i = 0;
-	if (!s || !f)
-		break;
 	while (s[i])
 	{
-		s[i] = f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
 
-f(index, &(s[index]));
-++index
+//f(index, &(s[index]));
+//++index
 /*
 Function name
 ft_striteri

@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:52:17 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 14:52:02 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:30:11 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 size_t	ft_intlen(int n)
 {
-	int		aux;
 	size_t	len;
 
-	aux = n;
 	len = 0;
 	if (n <= 0)
-	// es == 0 tambinén contando con que quiera escribir el 0
 		len++;
-	while (aux)
+	while (n)
 	{
-		aux = aux/10;
+		n = n/10;
 		len++;
 	}
 	return (len);
@@ -33,47 +30,26 @@ size_t	ft_intlen(int n)
 char	*ft_itoa(int n)
 {
 	char	*p;
-	int		aux;
 	size_t	len;
 
-	aux = n;
 	len = ft_intlen(n);
-	if (!(p = malloc(sizeof(char *) * (len))))
+	p = malloc(sizeof(char) * (len + 1));
+	if (!p)
 		return (NULL);
+	p[len--] = '\0';
+	if (n == 0)
+		p[len--] = '0';	
 	if (n < 0)
 	{
+		p[len--] = ((n % 10) * (-1)) + '0';
+		n = n / 10;
 		*p = '-';
-		aux = aux * -1;
+		n = n * -1;
 	}
-	p[len--] = '\0';
-	while (aux)
+	while (n)
 	{
-		p[len--] = aux % 10 + '0';
-		aux = aux/10;
+		p[len--] = (n % 10) + '0';
+		n = n/10;
 	}
 	return (p);
 }
-
-
-/*
-Function name
-		ft_itoa
-Prototype
-char *ft_itoa(int n);
-Turn in files
--
-Parameters
-n:  the integer to convert.
-Return value
-The string representing the integer.
-NULL if the allocation fails.
-External functs.
-malloc
-Description
-Allocates (with malloc(3)) and returns a string
-representing the integer received as an argument.
-Negative numbers must be handled.
-*/
-
-
-

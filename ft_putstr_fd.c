@@ -14,10 +14,13 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	if (s)
 	{
+		while (*s)
+		{
 		write(fd, s, 1);
 		s++;
+		}
 	}
 }
 

@@ -5,109 +5,77 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/28 15:00:40 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 16:44:20 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/01/31 14:24:52 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/01/31 14:27:46 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wordcount(char const *s, char c)
+static int	ft_wordcount(const char *str, char c)
 {
 	size_t	i;
 	size_t	n_str;
 
 	i = 0;
 	n_str = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (str[i] != c && (str[i + 1] == c || str[i + 1] == '\0'))
 			n_str++;
 		i++;
 	}
 	return (n_str);
 }
+
+static char	*ft_lettercount(const char *str, int start, int finish)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc((finish - start + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
+}
+
+char	**ft_wordfree(char **str, int i)
+{
+	while (i > 0)
+		free(str[i--]);
+	free(str);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
-	size_t	i;
-	size_t	sub_p;
-	size_t	last;
-	size_t	n_str;
+	int		i[3];
 
 	if (!s)
-		return ((char **)ft_strdup(""));
-	n_str = ft_wordcount(s, c);
-	p = malloc (sizeof(char *) * (n_str));
-	if (!p)
 		return (NULL);
-	i = 0;
-	last = 0;
-	sub_p = 0;
-	while (s[i++] == c)
-		last++;
-	while (sub_p < n_str)
+	p = malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
+	if (!p)
+		return (0);
+	i[0] = -1;
+	i[2] = 0;
+	i[1] = -1;
+	while (++i[0] <= (int)ft_strlen(s))
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (s[i[0]] != c && i[1] < 0)
+			i[1] = i[0];
+		else if ((s[i[0]] == c || i[0] == (int)ft_strlen(s)) && i[1] >= 0)
 		{
-			if (!(p[sub_p++] = malloc (ft_strlen(ft_substr(s, last, (i - last))))))
-				return (NULL);
-			while (s[i++ + 1] == c)
-				last = i + 1;
+			p[i[2]] = ft_lettercount(s, i[1], i[0]);
+			if (!(p[i[2]++]))
+				return (ft_wordfree(p, i[2]));
+			i[1] = -1;
 		}
-		i++;
 	}
+	p[i[2]] = 0;
 	return (p);
 }
-
-
-	//if (&ft_strchr(s[i], c) == &s[i])
-
-
-/*	
-	
-	char	*p;
-	char	*found; 	//?
-	
-	size_t	i;
-	size_t	len_sep;	//?
-	size_t	len_tot;
-	size_t	n;
-	
-	i = 0;
-	n = 0;
-	len_sep = ft_strlen(set);
-	len_tot = ft_strlen(s1);
-	found = ft_strnstr(s1[i], set, len_tot);
-	if (!s1)
-		return (ft_strdup(""));
-	if (!set || !found)
-		return ((char *)s1); // new complete string 
-//count occur
-	while (s1[i] && i < len_tot)
-	{
-		if (ft_strncmp(s1[i], set, len_sep) == 0 
-			&& (i + len_sep) <= len_tot)
-		{
-			i = i + len_sep;
-			n++;
-		}
-		i++;
-	}
-strsubstr
-
-//buff_strclean
-	if (!(p = malloc(len_tot - (len_sep * n))))
-		return (NULL);
-	while (s1[i] && i < len_tot)
-	{
-		while (ft_strncmp(s1[i], set, len_sep) == 0 
-			&& (i + len_sep) <= len_tot)
-			i = i + len_sep;
-		}
-		*p++ = s[i]
-		i++;
-	}
-	return (p)
-}
-*/

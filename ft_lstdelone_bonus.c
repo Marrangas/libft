@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:19:39 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 19:47:10 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 12:38:43 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	return (free(del(tlist->content)));
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
 
 /*

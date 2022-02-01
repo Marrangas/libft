@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:20:09 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 17:20:14 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 12:41:46 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	
+	t_list	*tmp;
+
+	if (lst)
+	{
+		while (*lst)
+		{
+			tmp = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			(*lst) = tmp;
+		}
+	}
 }
 /*
 Parameters		lst:  The address of a pointer to a node.

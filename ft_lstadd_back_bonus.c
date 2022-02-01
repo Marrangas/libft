@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:19:05 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 19:51:39 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 13:45:47 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		if (*lst)
 		{
-			*tmp = *ft_lstlast(*lst);
+			tmp = ft_lstlast(*lst);
 			tmp->next = new;
 		}
 		else

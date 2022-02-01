@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:20:36 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 17:20:41 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 12:49:41 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
 /*
 Parameters		lst:  The address of a pointer to a node.

@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 20:18:20 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/26 20:19:40 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:55:02 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len_ok--;
 	return (ft_substr(s1, 0, len_ok + 1));
 }
-/*
-Parameters
-s1:  The string to be trimmed.
-set:  The reference set of characters to trim.
-
-Return value
-The trimmed string.
-NULL if the allocation fails.
-
-External functs.
-malloc
-
-Description
-Allocates (with malloc(3)) and returns a copy of
-’s1’ with the characters specified in ’set’ removed
-from the beginning and the end of the string.
-*/

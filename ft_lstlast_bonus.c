@@ -6,13 +6,13 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:18:36 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 18:29:51 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:50:20 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
@@ -22,10 +22,3 @@ t_list *ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
-/*
-Parameters			lst:  The beginning of the list.
-Return value		Last node of the list
-External functs.	None
-Description
-Returns the last node of the list.
-*/

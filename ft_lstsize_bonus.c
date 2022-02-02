@@ -6,13 +6,13 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:17:57 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 19:34:06 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:50:09 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	n;
 
@@ -24,10 +24,3 @@ int ft_lstsize(t_list *lst)
 	}
 	return (n);
 }
-/*
-Parameters			lst:  The beginning of the list.
-Return value		The length of the list
-External functs.	None
-Description
-Counts the number of nodes in a list.
-*/

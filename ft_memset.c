@@ -6,7 +6,7 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:17:43 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 12:52:09 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:53:19 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (n--)
 	{
-		*(char *)(s + i) = (unsigned char)c;
+		*(unsigned char *)(s + i) = (unsigned char)c;
 		i++;
 	}
 	return (s);

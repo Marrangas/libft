@@ -6,13 +6,13 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:17:16 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 18:31:06 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:50:31 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst)
 	{
@@ -21,10 +21,3 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }	
-/*
-Parameters 		lst:  The address of a pointer to the first link of a list.
-				new:  The address of a pointer to the node to be added to the list.
-Return value	None
-External functs.None
-Description		Adds the node ’new’ at the beginning of the list.
-*/

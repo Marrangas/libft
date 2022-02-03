@@ -6,10 +6,12 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 14:24:52 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/31 14:31:42 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:51:36 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_wordcount(const char *str, char c)
@@ -43,7 +45,7 @@ static char	*ft_lettercount(const char *str, int start, int finish)
 	return (word);
 }
 
-char	**ft_wordfree(char **str, int i)
+static char	**ft_wordfree(char **str, int i)
 {
 	while (i > 0)
 		free(str[i--]);

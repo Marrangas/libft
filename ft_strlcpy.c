@@ -6,10 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 15:11:51 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 18:45:52 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:41:18 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

@@ -6,10 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:20:09 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/02/01 19:50:28 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:51:45 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))

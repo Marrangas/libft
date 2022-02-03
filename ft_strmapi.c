@@ -6,10 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:50:22 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/02/01 19:55:13 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:40:48 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

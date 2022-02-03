@@ -6,10 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 15:46:29 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/02/01 13:43:03 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:41:33 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)

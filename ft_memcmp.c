@@ -6,10 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 18:09:44 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 12:47:10 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:45:12 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

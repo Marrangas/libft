@@ -6,10 +6,12 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:21:37 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/26 20:16:52 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:38:57 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

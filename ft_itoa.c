@@ -6,13 +6,14 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 11:52:17 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/02/01 19:18:01 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:52:05 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
 
-size_t	ft_intlen(int n)
+static size_t	ft_intlen(int n)
 {
 	size_t	len;
 

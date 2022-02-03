@@ -45,6 +45,7 @@ SRCSB	= ft_lstnew_bonus.c					\
 			ft_lstmap_bonus.c
 
 OBJB	= ${SRCSB:.c=.o}
+BONUS	= .
 NAME	= libft.a
 CC		= gcc
 RM		= rm -f
@@ -55,10 +56,12 @@ AR	=	ar rc
 ${NAME}:	${OBJS}
 			${AR} ${NAME} ${OBJS}
 			ranlib ${NAME}
-all: 		${NAME}
-bonus:		${OBJS} ${OBJB}
+			
+${BONUS}:	${OBJS} ${OBJB}
 			${AR}  ${NAME} ${OBJB}
 			ranlib ${NAME}
+all: 		${NAME}
+bonus:		${BONUS}
 clean:
 			${RM} ${OBJS} ${OBJB}
 fclean:		clean

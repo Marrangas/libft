@@ -6,11 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 16:03:55 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 12:32:07 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:53:12 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {

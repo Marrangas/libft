@@ -6,11 +6,17 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:17:57 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/02/01 19:50:09 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 19:03:56 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int	ft_lstsize(t_list *lst)
 {

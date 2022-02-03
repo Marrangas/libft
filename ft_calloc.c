@@ -5,11 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 15:24:56 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 18:15:12 by jmorras-         ###   ########.fr       */
+/*   Created: 2022/02/03 18:58:13 by jmorras-          #+#    #+#             */
+/*   Updated: 2022/02/03 18:58:44 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)

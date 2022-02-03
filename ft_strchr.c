@@ -6,10 +6,11 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 18:14:19 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/25 18:38:59 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:42:23 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)

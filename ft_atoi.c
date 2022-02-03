@@ -6,11 +6,9 @@
 /*   By: jmorras- <jmorras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 11:58:41 by jmorras-          #+#    #+#             */
-/*   Updated: 2022/01/28 15:00:03 by jmorras-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:53:43 by jmorras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
